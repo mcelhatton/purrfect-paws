@@ -14,7 +14,8 @@ export default function seed(store) {
     payload: {
       listId: firstListId,
       cardId: shortid.generate(),
-      cardText: "First card"
+      cardPetName: "Athena",
+      cardText: "Take a walk with Pete"
     }
   });
 
@@ -52,5 +53,79 @@ export default function seed(store) {
       cardText: "Card 2"
     }
   });
-};
 
+  const thirdListId = shortid.generate();
+
+  store.dispatch({
+    type: "ADD_LIST",
+    payload: { listId: thirdListId, listTitle: "Done - Pending Payment" }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: thirdListId,
+      cardId: shortid.generate(),
+      cardText: "First card"
+    }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: thirdListId,
+      cardId: shortid.generate(),
+      cardText: "Second card"
+    }
+  });
+
+  const forthListId = shortid.generate();
+
+  store.dispatch({
+    type: "ADD_LIST",
+    payload: { listId: forthListId, listTitle: "Done - Pending Pickup" }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: forthListId,
+      cardId: shortid.generate(),
+      cardText: "First card"
+    }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: forthListId,
+      cardId: shortid.generate(),
+      cardText: "Second card"
+    }
+  });
+
+  const fifthListId = shortid.generate();
+
+  store.dispatch({
+    type: "ADD_LIST",
+    payload: { listId: fifthListId, listTitle: "Completed" }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: fifthListId,
+      cardId: shortid.generate(),
+      cardText: "First card"
+    }
+  });
+
+  store.dispatch({
+    type: "ADD_CARD",
+    payload: {
+      listId: fifthListId,
+      cardId: shortid.generate(),
+      cardText: "Second card"
+    }
+  });
+};

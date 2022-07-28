@@ -1,5 +1,5 @@
 {
-  "name": "mern-client",
+  "name": "purrfect-paws-client",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
@@ -31,6 +31,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "seed": "npm run seed",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
