@@ -14,7 +14,6 @@ class List extends Component {
   state = {
     editingTitle: false,
     title: this.props.list.title,
-    photo: this.props.list.photo,
     customer: this.props.list.customer,
     notes: this.props.list.notes,
     addingCard: false,

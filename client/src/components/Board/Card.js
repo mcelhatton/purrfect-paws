@@ -72,6 +72,7 @@ class Card extends Component {
                 </div>
               )}
               {card.cardPetName}
+              {card.photo}
               {card.text}
             </div>
           )}

@@ -77,10 +77,10 @@ db.once('open', async () => {
   await User.deleteMany();
 
   await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
+    firstName: 'Colin',
+    lastName: 'McElhatton',
+    email: 'colin@testmail.com',
+    password: 'test1234',
     orders: [
       {
         products: [products[0]._id, products[0]._id, products[1]._id]
@@ -89,10 +89,10 @@ db.once('open', async () => {
   });
 
   await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
+    firstName: 'Robert',
+    lastName: 'Smith',
+    email: 'robert@testmail.com',
+    password: 'test1234'
   });
 
   console.log('users seeded');
