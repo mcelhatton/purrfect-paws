@@ -1,72 +1,42 @@
-import React from 'react';
-<<<<<<< HEAD
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-=======
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+import { ApolloProvider } from "@apollo/react-hooks"
+import ApolloClient from "apollo-boost"
 
-// import Home from './pages/Home';
+import Navbar from "./components/Navbar"
+import SavedBooks from "./pages/SavedBooks"
+import SearchBooks from "./pages/SearchBooks"
 
-
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
-
-const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
-  return {
-    headers: {
-      ...headers,
-      authorization: token ? `Bearer ${token}` : '',
-    },
-  };
-});
-
+// establish apollo client
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
+    request: operation => {
+        const token = localStorage.getItem("id_token")
+
+        operation.setContext({
+            headers: {
+                authorization: token ? `Bearer ${token}` : "",
+            },
+        })
+    },
+    uri: "/graphql",
+})
 
 function App() {
-  return (
-    <ApolloProvider client={client}>
-      <Router>
-        {/* <div> */}
-          {/* <Nav />
-          <Switch>
-            {/* <Route exact path="/" component={Home} /> */}
-          {/* </Switch> */}
-        {/* </div> */} 
-      </Router>
-    </ApolloProvider>
->>>>>>> colin
-  );
+    return (
+        <ApolloProvider client={client}>
+            <Router>
+                <>
+                    <Navbar />
+                    <Switch>
+                        <Route exact path="/" component={SearchBooks} />
+                        <Route exact path="/saved" component={SavedBooks} />
+                        <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
+                    </Switch>
+                </>
+            </Router>
+        </ApolloProvider>
+    )
 }
 
-export default App;
+export default App

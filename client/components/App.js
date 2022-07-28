@@ -1,18 +1,18 @@
-import "../styles/App.css";
+import "../styles/App.css"
 
-import React, { Component } from "react";
-import Board from "./Board";
+import React, { Component } from "react"
+import Board from "./Board"
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="Header">Purrfect Paws Grooming Center</div>
+    render() {
+        return (
+            <div className="App">
+                <div className="Header">Purrfect Paws Grooming Center</div>
 
-        <Board />
-      </div>
-    );
-  }
+                <Board />
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App
