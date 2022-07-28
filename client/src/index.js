@@ -1,21 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
-import "../client/public/index.html";
+import './index.css';
 import App from './App';
-import { Provider } from "react-redux";
-import store from "../src/store";
-import * as serviceWorker from "./serviceWorker";
+import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import store from './utils/store';
 
-const rootElement = document.getElementById("root");
+
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  rootElement
+  <React.StrictMode>
+    <Provider store = {store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.register();
