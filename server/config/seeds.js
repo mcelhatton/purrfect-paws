@@ -35,7 +35,7 @@ db.once('open', async () => {
       quantity: 1
     },
     {
-      name: 'Dog Hair Cutt',
+      name: 'Dog Hair Cut',
       category: categories[1]._id,
       description:
         'Is your dog shedding everywhere?  Get your dog a Purrfect Haircut!',
