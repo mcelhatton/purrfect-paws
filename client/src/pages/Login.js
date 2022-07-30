@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Auth from "../utils/auth"
 import { LOGIN } from "../utils/mutations"
 
-function Login(props) {
+function Login() {
     const [formState, setFormState] = useState({ email: "", password: "" })
     const [login, { error }] = useMutation(LOGIN)
 
@@ -30,17 +30,19 @@ function Login(props) {
 
     return (
         <div className="container my-1">
-            <h6 id="newcust">New Customer?
-            <a id="signupbtn" href="/signup">
-                Start here.
-            </a>
+            <h6 id="newcust">
+                New to us?
+                <a id="signupbtn" href="/signup">
+                    Sign Up.
+                </a>
             </h6>
 
-            <h2 id="hlogin">Login</h2>
-            <form class="loginbox" onSubmit={handleFormSubmit}>
-                <div className="flex-row my-2">
+            <h2 id="hlogin">Welcome Back!</h2>
+            <form id="loginbox" onSubmit={handleFormSubmit}>
+                <div className="flex-row mb-3">
                     <label htmlFor="email">Email address:</label>
                     <input
+                        icon="user"
                         placeholder="youremail@test.com"
                         name="email"
                         type="email"
@@ -50,7 +52,14 @@ function Login(props) {
                 </div>
                 <div className="flex-row my-2">
                     <label htmlFor="pwd">Password:</label>
-                    <input placeholder="******" name="password" type="password" id="pwd" onChange={handleChange} />
+                    <input
+                        icon="lock"
+                        placeholder="******"
+                        name="password"
+                        type="password"
+                        id="pwd"
+                        onChange={handleChange}
+                    />
                 </div>
                 {error ? (
                     <div>

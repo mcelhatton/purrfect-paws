@@ -163,9 +163,10 @@ nav {
     justify-content: center;
 }
 
-.loginbox {
-    top: 40px;
+#loginbox {
+    top: 75px;
     position: relative;
+    right: 75px;
 }
 
 #email {
@@ -180,35 +181,34 @@ nav {
 
 #btnlog {
     position: relative;
-    right: 397px;
+    right: 246px;
 }
 
 #hlogin {
     position: relative;
-    left: 75px;
+    left: 160px;
 }
 #srvlog {
     position: relative;
-    left: 50px;
+    left: 100px;
 }
 
 #loginout {
-    left: 65px;
+    left: 110px;
     position: relative;
 }
 
 #newcust {
     position: relative;
-    left: 355px;
+    left: 235px;
     font-size: small;
-    top: 175px;
+    top: 160px;
 }
-/* #signupbtn {
+#lgout {
     position: relative;
-    left: 0px;
-    font-size: small;
-    top: 0px;
-} */
+    left: 10px;
+}
+
 nav-cart {
     background-image: url(https://m.media-amazon.com/images/G/01/AmazonBusiness/Rebranding/ab-cart-icon2x._CB485966036_.png);
     background-position: 0 0;
@@ -237,7 +237,8 @@ nav-cart {
 .mx-1 {
     margin-right: var(--spacing-one);
     margin-left: var(--spacing-one);
-    padding: 5px;
+    position: relative;
+    top: 7px;
 }
 
 .mx-2 {

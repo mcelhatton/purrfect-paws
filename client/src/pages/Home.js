@@ -10,7 +10,7 @@ const Home = () => {
             <Provider store={store}>
                 <Board />
             </Provider>
-            ,
+
             <Cart />
         </div>
     )
