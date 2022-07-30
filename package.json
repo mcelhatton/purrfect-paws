@@ -15,9 +15,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material/segmented-button": "^14.0.0",
     "bootstrap": "^5.2.0",
     "if-env": "^1.0.4",
     "react-bootstrap": "^2.4.0",
+    "react-segment-analytics": "^2.0.0",
     "semantic": "^0.0.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.1.3",
