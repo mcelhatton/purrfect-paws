@@ -65,7 +65,7 @@ function Signup(props) {
                     <input placeholder="******" name="password" type="password" id="pwd" onChange={handleChange} />
                 </div>
                 <div className="flex-row flex-end">
-                    <button type="submit">Submit</button>
+                    <button type="submit">Continue</button>
                 </div>
             </form>
         </div>

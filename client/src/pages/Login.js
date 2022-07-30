@@ -1,6 +1,5 @@
 import { useMutation } from "@apollo/react-hooks"
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
 import Auth from "../utils/auth"
 import { LOGIN } from "../utils/mutations"
 
@@ -31,11 +30,15 @@ function Login(props) {
 
     return (
         <div className="container my-1">
-            <Link to="/signup">← Go to Signup</Link>
+            <h6 id="newcust">New Customer?
+            <a id="signupbtn" href="/signup">
+                Start here.
+            </a>
+            </h6>
 
-            <h2>Login</h2>
-            <form onSubmit={handleFormSubmit}>
-                <div className="flex-row space-between my-2">
+            <h2 id="hlogin">Login</h2>
+            <form class="loginbox" onSubmit={handleFormSubmit}>
+                <div className="flex-row my-2">
                     <label htmlFor="email">Email address:</label>
                     <input
                         placeholder="youremail@test.com"
@@ -45,7 +48,7 @@ function Login(props) {
                         onChange={handleChange}
                     />
                 </div>
-                <div className="flex-row space-between my-2">
+                <div className="flex-row my-2">
                     <label htmlFor="pwd">Password:</label>
                     <input placeholder="******" name="password" type="password" id="pwd" onChange={handleChange} />
                 </div>
@@ -55,7 +58,9 @@ function Login(props) {
                     </div>
                 ) : null}
                 <div className="flex-row flex-end">
-                    <button type="submit">Submit</button>
+                    <button id="btnlog" type="submit">
+                        Login
+                    </button>
                 </div>
             </form>
         </div>
