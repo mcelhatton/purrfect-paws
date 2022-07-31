@@ -28,10 +28,11 @@ const resolvers = {
     },
     users: async () => {
       return User.find()
-        .select('-__v -password')
-        .populate('thoughts')
-        .populate('friends');
+        .select("-__v -password")
+        .populate("thoughts")
+        .populate("friends");
     },
+   
 
     user: async (parent, args, context) => {
       if (context.user) {
