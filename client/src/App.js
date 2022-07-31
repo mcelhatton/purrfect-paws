@@ -3,6 +3,7 @@ import ApolloClient from "apollo-boost"
 import React from "react"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
+// import Carousel from "./components/Carousel/index"
 import Footer from "./components/Footer/index"
 import Nav from "./components/Nav"
 import ProductList from "./components/ProductList"
@@ -42,6 +43,7 @@ function App() {
                         <Route exact path="/success" component={Success} />
                         <Route component={NoMatch} />
                     </Switch>
+                    {/* <Carousel /> */}
                 </div>
                 <Footer />
             </Router>
