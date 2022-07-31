@@ -1,45 +1,64 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import { Container, Grid, Header, List, Segment } from "semantic-ui-react"
+import { Grid, List } from "semantic-ui-react"
 
-const Footer = () => {
-    return (
-        <Segment inverted vertical>
-            <Container>
-                <Grid divided inverted stackable>
-                    <Grid.Row>
-                        <Grid.Column width={10}>
-                            <Header inverted as="h4" content="Dimos Pagkas" />
-                            <List link inverted>
-                                <a target={"_blank"} href="https://github.com/djpdim">
-                                    GitHub
-                                </a>
-                            </List>
-                        </Grid.Column>
-                        <Grid.Column width={3}>
-                            <Header inverted as="h4" content="Priyam" />
-                            <List link inverted>
-                                <a target={"_blank"} href="https://github.com/djpdim">
-                                    GitHub
-                                </a>
-                            </List>
-                        </Grid.Column>
-                        <Grid.Column width={7}>
-                            <Header as="h4" inverted>
-                                Join the Paw Community: Be the First to Know!
-                            </Header>
-                            <List link inverted>
-                                <List.Item>
-                                    Never miss a service <Link to="/products">Find out more</Link> about our exclusive
-                                    subscription.{" "}
-                                </List.Item>
-                            </List>
-                        </Grid.Column>
-                    </Grid.Row>
-                </Grid>
-            </Container>
-        </Segment>
-    )
-}
+const Footer = () => (
+    <div className="footer">
+        <Grid.Column width={3}>
+            <a id="footext2">Developers</a>
+            <List link inverted>
+                <List.Item href="https://github.com/djpdim" target="_blank" rel="noopener noreferrer">
+                    djpdim
+                </List.Item>
+                <List.Item href="https://github.com/rpliszka1987" target="_blank" rel="noopener noreferrer">
+                    rpliszka1987
+                </List.Item>
+                <List.Item href="https://github.com/vmedina927" target="_blank" rel="noopener noreferrer">
+                    vmedina927
+                </List.Item>
+                <List.Item href="https://github.com/mcelhatton" target="_blank" rel="noopener noreferrer">
+                    mcelhatton
+                </List.Item>
+                <List.Item href="https://github.com/cpriyam90" target="_blank" rel="noopener noreferrer">
+                    cpriyam90
+                </List.Item>
+                <List.Item href="https://github.com/MaameSekyere" target="_blank" rel="noopener noreferrer">
+                    MaameSekyere
+                </List.Item>
+            </List>
+
+            <p id="footext">
+                &copy; 2022 <a> </a>
+                {/* <a href="https://github.com/djpdim" target="_blank" rel="noopener noreferrer">
+                    djpdim
+                </a>
+                <a> </a>
+                <a id="acolor"> | </a>
+                <a href="https://github.com/rpliszka1987" target="_blank" rel="noopener noreferrer">
+                    rpliszka1987
+                </a>
+                <a> </a>
+                <a id="acolor"> | </a>
+                <a href="https://github.com/vmedina927" target="_blank" rel="noopener noreferrer">
+                    vmedina927
+                </a>
+                <a> </a>
+                <a id="acolor"> | </a>
+                <a href="https://github.com/mcelhatton" target="_blank" rel="noopener noreferrer">
+                    mcelhatton
+                </a>
+                <a> </a>
+                <a id="acolor"> | </a>
+                <a href="https://github.com/cpriyam90" target="_blank" rel="noopener noreferrer">
+                    cpriyam90
+                </a>
+                <a> </a>
+                <a id="acolor"> | </a>
+                <a href="https://github.com/MaameSekyere" target="_blank" rel="noopener noreferrer">
+                    MaameSekyere
+                </a> */}
+            </p>
+        </Grid.Column>
+    </div>
+)
 
 export default Footer

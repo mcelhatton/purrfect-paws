@@ -19,6 +19,7 @@
     "bootstrap": "^5.2.0",
     "if-env": "^1.0.4",
     "react-bootstrap": "^2.4.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-segment-analytics": "^2.0.0",
     "semantic": "^0.0.1",
     "semantic-ui-css": "^2.4.1",
