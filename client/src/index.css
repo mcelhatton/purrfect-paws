@@ -171,12 +171,12 @@ nav {
 
 #email {
     position: relative;
-    left: 10px;
+    left: 0px;
 }
 
 #pwd {
     position: relative;
-    left: 10px;
+    left: 0px;
 }
 
 #btnlog {
@@ -218,6 +218,11 @@ nav {
     border-radius: 0.28571429rem;
     border: 1px solid rgba(34, 36, 38, 0.15);
     width: 420px;
+}
+
+h2.ui.header {
+    position: relative;
+    top: 10px;
 }
 
 nav-cart {
