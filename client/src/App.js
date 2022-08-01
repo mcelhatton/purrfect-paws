@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 // import Carousel from "./components/Carousel/index"
 import Footer from "./components/Footer/index"
+// import Jumbotron from "./components/Jumbotron"
 import Nav from "./components/Nav"
 import ProductList from "./components/ProductList"
 import Detail from "./pages/Detail"
@@ -43,8 +44,8 @@ function App() {
                         <Route exact path="/success" component={Success} />
                         <Route component={NoMatch} />
                     </Switch>
-                    {/* <Carousel /> */}
                 </div>
+                {/* <Jumbotron /> */}
                 <Footer />
             </Router>
         </ApolloProvider>

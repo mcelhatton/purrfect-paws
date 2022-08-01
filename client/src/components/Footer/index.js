@@ -4,7 +4,7 @@ import { Grid, List } from "semantic-ui-react"
 const Footer = () => (
     <div className="footer">
         <Grid divided inverted stackable>
-            <a id="footext2">Developers</a>
+            <div id="footext2">Developers</div>
             <List link inverted className="githubnames">
                 <List.Item
                     href="https://github.com/djpdim"
@@ -31,9 +31,9 @@ const Footer = () => (
                 </List.Item>
             </List>
 
-            <p id="footext">
+            <span id="footext">
                 &copy; 2022 <a> </a>
-            </p>
+            </span>
 
             <a id="footext2">Developers</a>
             <List link inverted className="githubnames">
