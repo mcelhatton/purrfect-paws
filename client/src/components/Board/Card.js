@@ -71,9 +71,8 @@ class Card extends Component {
                   </div>
                 </div>
               )}
-              {card.cardPetName}
-              {card.photo}
               {card.text}
+              // add react image 
             </div>
           )}
         </Draggable>
