@@ -19,7 +19,6 @@ class Card extends Component {
     this.setState({
       hover: false,
       editing: true,
-      cardPetName: this.props.card.cardPetName,
       text: this.props.card.text
 
     });
@@ -72,7 +71,6 @@ class Card extends Component {
                 </div>
               )}
               {card.text}
-              // add react image 
             </div>
           )}
         </Draggable>
@@ -81,8 +79,6 @@ class Card extends Component {
       return (
         <CardEditor
           text={card.text}
-          photo={card.photo}
-          
           onDelete={this.deleteCard}
           onCancel={this.endEditing}
         />
