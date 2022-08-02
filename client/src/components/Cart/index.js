@@ -22,12 +22,12 @@ const Cart = () => {
     const[getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
     useEffect(() => {
-        // async function to get data from IndexedDB
+      
         async function getCart() {
             const cart = await idbPromise('cart', 'get');
             dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
         };
-        // check global state for any cart products, and if not, use function to retrieve data from the IndexedDB store
+       
         if (!state.cart.length) {
             getCart();
         }

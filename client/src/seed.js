@@ -14,8 +14,8 @@ export default function seed(store) {
     payload: {
       listId: firstListId,
       cardId: shortid.generate(),
-      cardPetName: "Athena",
-      cardText: "Take a walk with Pete"
+      cardPetName: "Athena - Teeth brushing",
+      cardText: "Athena - Teeth brushing"
     }
   });
 
@@ -24,7 +24,7 @@ export default function seed(store) {
     payload: {
       listId: firstListId,
       cardId: shortid.generate(),
-      cardText: "Second card"
+      cardText: "Pete the Penguin - Water proofing"
     }
   });
 
@@ -41,7 +41,7 @@ export default function seed(store) {
     payload: {
       listId: secondListId,
       cardId: shortid.generate(),
-      cardText: "Card 1"
+      cardText: "Lily the Lama - Brushing"
     }
   });
 
@@ -50,7 +50,7 @@ export default function seed(store) {
     payload: {
       listId: secondListId,
       cardId: shortid.generate(),
-      cardText: "Card 2"
+      cardText: "Tank the Turtle - Turtle Wax"
     }
   });
 
@@ -66,7 +66,7 @@ export default function seed(store) {
     payload: {
       listId: thirdListId,
       cardId: shortid.generate(),
-      cardText: "First card"
+      cardText: "Cali the Camel - Camel Camp"
     }
   });
 
@@ -75,7 +75,7 @@ export default function seed(store) {
     payload: {
       listId: thirdListId,
       cardId: shortid.generate(),
-      cardText: "Second card"
+      cardText: "Sally the Sheep - Shearing"
     }
   });
 
@@ -91,7 +91,7 @@ export default function seed(store) {
     payload: {
       listId: forthListId,
       cardId: shortid.generate(),
-      cardText: "First card"
+      cardText: "Bella the Bear - Nail Trimming"
     }
   });
 
@@ -100,7 +100,7 @@ export default function seed(store) {
     payload: {
       listId: forthListId,
       cardId: shortid.generate(),
-      cardText: "Second card"
+      cardText: "Kelly the Kitty - Haircut"
     }
   });
 
@@ -111,21 +111,6 @@ export default function seed(store) {
     payload: { listId: fifthListId, listTitle: "Completed" }
   });
 
-  store.dispatch({
-    type: "ADD_CARD",
-    payload: {
-      listId: fifthListId,
-      cardId: shortid.generate(),
-      cardText: "First card"
-    }
-  });
-
-  store.dispatch({
-    type: "ADD_CARD",
-    payload: {
-      listId: fifthListId,
-      cardId: shortid.generate(),
-      cardText: "Second card"
-    }
-  });
 };
+
+console.log("board seeded");

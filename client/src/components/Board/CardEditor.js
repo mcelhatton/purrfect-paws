@@ -3,7 +3,6 @@ import "../../styles/CardEditor.css";
 import React, { Component } from "react";
 import TextareaAutosize from "react-textarea-autosize";
 import EditButtons from "./EditButtons";
-import CardMedia from '@mui/material/CardMedia';
 
 class CardEditor extends Component {
   state = {
@@ -35,12 +34,6 @@ class CardEditor extends Component {
             value={text}
             onChange={this.handleChangeText}
             onKeyDown={this.onEnter}
-          />
-          <CardMedia
-            className="Edit-Card-Media"  component="img"
-            height="140"
-            image="../public/images/kitty.jpg"
-            alt="green iguana"
           />
         </div>
         <EditButtons
