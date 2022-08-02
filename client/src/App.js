@@ -1,3 +1,4 @@
+
 import { ApolloProvider } from "@apollo/react-hooks"
 import ApolloClient from "apollo-boost"
 import React from "react"
@@ -16,6 +17,7 @@ import OrderHistory from "./pages/OrderHistory"
 import Signup from "./pages/Signup"
 import Success from "./pages/Success"
 
+
 const client = new ApolloClient({
     request: operation => {
         const token = localStorage.getItem("id_token")
@@ -29,6 +31,7 @@ const client = new ApolloClient({
 })
 
 function App() {
+
     return (
         <ApolloProvider client={client}>
             <Router>
@@ -50,6 +53,7 @@ function App() {
             </Router>
         </ApolloProvider>
     )
+
 }
 
 export default App
