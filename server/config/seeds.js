@@ -1,67 +1,97 @@
-const db = require('./connection');
-const { User, Customer, Service, Pet } = require('../server/models');
+const db = require("./connection")
+const { User, Product, Category } = require("../models")
 
-db.once('open', async () => {
-  await Service.deleteMany();
+db.once("open", async () => {
+    await Category.deleteMany()
 
-  const services = await Service.insertMany([
-    { name: 'Large Dog Grooming' },
-    { name: 'Medium Dog Grooming' },
-    { name: 'Small Dog Grooming' },
-    { name: 'Teeth Brushing' },
-    { name: 'Shell Waxing' }
-  ]);
+    const categories = await Category.insertMany([
+        { name: "Cats" },
+        { name: "Dogs" },
+        { name: "Turtles" },
+        { name: "Lamas" },
+    ])
 
-  console.log('services seeded');
+    console.log("categories seeded")
 
-  await Pet.deleteMany();
+    await Product.deleteMany()
 
-  const pets = await Pet.insertMany([
-    {
-      name: 'Lily the Lama',
-      description:
-        'She likes tacos',
-      image: 'lama.jpg',
-      owner: customer[0]._id,
-    },
-    {
-      name: 'Lily the Lama',
-      description:
-        'She likes tacos',
-      image: 'lama.jpg',
-      owner: customer[0]._id,
-    },
-  ]);
+    const products = await Product.insertMany([
+        {
+            name: "Cat head scratching 1 hour",
+            description:
+                "Give your cat the luxury it demands with a one hour head scratching service from Purrfect Paws!",
+            image: "kitty.jpg",
+            category: categories[0]._id,
+            price: 99.99,
+            quantity: 1,
+        },
+        {
+            name: "Cat hair shaving",
+            description:
+                "Are you upset with your cat?  Did it wake you up at 3am?  Pay your cat back with our Full Cat Shaving service!",
+            image: "kitty1.jpg",
+            category: categories[0]._id,
+            price: 1.99,
+            quantity: 1,
+        },
+        {
+            name: "Dog Hair Cutt",
+            category: categories[1]._id,
+            description: "Is your dog shedding everywhere?  Get your dog a Purrfect Haircut!",
+            image: "puppy.jpg",
+            price: 37.99,
+            quantity: 20,
+        },
+        {
+            name: "Turtle Wax",
+            category: categories[1]._id,
+            description: "Make your turtle Purr with a shinny shell waxing!.",
+            image: "turtle.jpg",
+            price: 33.99,
+            quantity: 1,
+        },
+        {
+            name: "Nail clipping ",
+            category: categories[1]._id,
+            description: "Just like us dogs like a fresh nail clipping!",
+            image: "puppy1.jpg",
+            price: 24.99,
+            quantity: 1,
+        },
+        {
+            name: "Camel Camp",
+            category: categories[2]._id,
+            description: "Everyone knows Camels are very social.  Sign your camel up for our Camel Camp!",
+            image: "camel.jpg",
+            price: 399.99,
+            quantity: 30,
+        },
+    ])
 
-  console.log('pets seeded');
+    console.log("products seeded")
 
-  await Customer.deleteMany();
+    await User.deleteMany()
 
-  await Customer.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    phone: '555-555-5555',
-    pets: [
-      {
-        pets: [pets[0]._id, pets[1]._id]
-      }
-    ]
-  });
+    await User.create({
+        firstName: "Pamela",
+        lastName: "Washington",
+        email: "pamela@testmail.com",
+        password: "password12345",
+        orders: [
+            {
+                products: [products[0]._id, products[0]._id, products[1]._id],
+            },
+        ],
+    })
 
-  console.log('customers seeded');
+    await User.create({
+        firstName: "Elijah",
+        lastName: "Holt",
+        email: "eholt@testmail.com",
+        password: "password12345",
+    })
 
-  await User.deleteMany();
+    console.log("users seeded")
 
-  await User.create({
-    firstName: 'Colin',
-    lastName: 'McElhatton',
-    email: 'cmac@cu.com',
-    password: 'password12345'
-  });
-
-  console.log('users seeded');
-
-  process.exit();
-});
+    process.exit()
+})
