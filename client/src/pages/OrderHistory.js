@@ -15,21 +15,49 @@ function OrderHistory() {
     return (
         <>
             <div className="container my-1">
-                <Link to="/products">← Back to Products</Link>
+                <Link to="/products" style={{ position: "relative", width: "30%", height: "10%" }}>
+                    ← Back to Products
+                </Link>
 
                 {user ? (
                     <>
-                        <h2>
+                        <h2
+                            style={{
+                                height: "10%",
+                                width: "inherit",
+                                display: "flex",
+                                height: "10%",
+                                width: "inherit",
+                                left: "480px",
+                                position: "relative",
+                                justifyContent: "center",
+                            }}
+                        >
                             Order History for {user.firstName} {user.lastName}
                         </h2>
                         {user.orders.map(order => (
                             <div key={order._id} className="my-2">
-                                <h3>{new Date(parseInt(order.purchaseDate)).toLocaleDateString()}</h3>
                                 <div className="flex-row">
                                     {order.products.map(({ _id, image, name, price }, index) => (
-                                        <div key={index} className="card px-1 py-1">
+                                        <div
+                                            key={index}
+                                            style={{ top: "30px", position: "relative", right: "685px" }}
+                                            className="card px-1 py-1"
+                                        >
                                             <Link to={`/products/${_id}`}>
-                                                <img alt={name} src={`/images/${image}`} />
+                                                <h3
+                                                    style={{
+                                                        color: "black",
+                                                        textDecoration: "underline",
+                                                    }}
+                                                >
+                                                    {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
+                                                </h3>
+                                                <img
+                                                    alt={name}
+                                                    style={{ height: "50%", width: "50%" }}
+                                                    src={`/images/${image}`}
+                                                />
                                                 <p>{name}</p>
                                             </Link>
                                             <div>

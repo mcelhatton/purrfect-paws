@@ -1,5 +1,6 @@
 import React from "react"
-import { Grid, List } from "semantic-ui-react"
+import { Link } from "react-router-dom"
+import { Grid, Header, List } from "semantic-ui-react"
 
 const Footer = () => (
     <div className="footer">
@@ -34,8 +35,18 @@ const Footer = () => (
             <span id="footext">
                 &copy; 2022 <a> </a>
             </span>
-
-            <a id="footext2">Developers</a>
+            <Grid.Column width={7}>
+                <Header as="h4" inverted>
+                    Join the Paw Community: Be the First to Know!
+                </Header>
+                <List link inverted>
+                    <List.Item>
+                        Never miss anything! <Link to="/subscription">Find out more</Link> about our exclusive
+                        subscription.{" "}
+                    </List.Item>
+                </List>
+            </Grid.Column>
+            {/* <a id="footext2">Developers</a>
             <List link inverted className="githubnames">
                 <List.Item
                     href="https://github.com/djpdim"
@@ -64,7 +75,7 @@ const Footer = () => (
 
             <p id="footext">
                 &copy; 2022 <a> </a>
-            </p>
+            </p> */}
         </Grid>
     </div>
 )
