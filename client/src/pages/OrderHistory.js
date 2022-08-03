@@ -28,7 +28,6 @@ function OrderHistory() {
                                 display: "flex",
                                 height: "10%",
                                 width: "inherit",
-                                left: "480px",
                                 position: "relative",
                                 justifyContent: "center",
                             }}
