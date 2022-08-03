@@ -5,7 +5,9 @@
 ## Table of Contents
 
 - [Project Description](https://github.com/mcelhatton/purrfect-paws#project-description)
-- [Installation](https://github.com/mcelhatton/purrfect-paws#installation) -[Usage](https://github.com/mcelhatton/purrfect-paws#usage) -[Screenshots](https://github.com/mcelhatton/purrfect-paws#screenshots)
+- [Installation](https://github.com/mcelhatton/purrfect-paws#installation)
+- [Usage](https://github.com/mcelhatton/purrfect-paws#usage)
+- [Screenshots](https://github.com/mcelhatton/purrfect-paws#screenshots)
 
 ## Project Description
 
