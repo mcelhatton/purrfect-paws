@@ -27,6 +27,7 @@ function OrderHistory() {
                                 width: "inherit",
                                 display: "flex",
                                 height: "10%",
+                                left: "300px",
                                 width: "inherit",
                                 position: "relative",
                                 justifyContent: "center",
@@ -40,7 +41,7 @@ function OrderHistory() {
                                     {order.products.map(({ _id, image, name, price }, index) => (
                                         <div
                                             key={index}
-                                            style={{ top: "30px", position: "relative", right: "595px" }}
+                                            style={{ top: "80px", position: "relative", right: "595px" }}
                                             className="card px-1 py-1"
                                         >
                                             <Link to={`/products/${_id}`}>
