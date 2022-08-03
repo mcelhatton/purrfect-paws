@@ -15,7 +15,7 @@ function OrderHistory() {
     return (
         <>
             <div className="container my-1">
-                <Link to="/products" style={{ position: "relative", width: "30%", height: "10%" }}>
+                <Link to="/products" style={{ position: "relative", width: "40%", height: "10%", left: "10px" }}>
                     ← Back to Products
                 </Link>
 
@@ -40,7 +40,7 @@ function OrderHistory() {
                                     {order.products.map(({ _id, image, name, price }, index) => (
                                         <div
                                             key={index}
-                                            style={{ top: "30px", position: "relative", right: "685px" }}
+                                            style={{ top: "30px", position: "relative", right: "595px" }}
                                             className="card px-1 py-1"
                                         >
                                             <Link to={`/products/${_id}`}>
