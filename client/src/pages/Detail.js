@@ -104,7 +104,11 @@ function Detail() {
                         </button>
                     </p>
 
-                    <img src={`/images/${currentProduct.image}`} alt={currentProduct.name} />
+                    <img
+                        src={`/images/${currentProduct.image}`}
+                        style={{ height: "50%", width: "50%" }}
+                        alt={currentProduct.name}
+                    />
                 </div>
             ) : null}
             {loading ? <img src={spinner} alt="loading" /> : null}
